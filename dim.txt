@@ -1,0 +1,53 @@
+dimensions :
+    - customer
+        - CompanyName
+        - ContactName
+        - ContactTitle
+
+    - location
+        - City
+        - Region
+        - PostalCode
+        - Countrly
+    - employee
+        - OriginalId 
+        - LastName
+        - FirstName
+    - date 
+        - Year
+        - Month
+        - Day
+    - produit 
+        - OriginalId
+        - FrenchName
+        - EnglishName
+        - QuantityPerUnit
+        - Discontinued
+        - categorieId (FK)
+    - Categorie 
+        - OriginalId
+        - FrenchName
+        - EnglishName
+        - Description
+
+faits : 
+    - sale (<= shipper)
+        - FK vers dimensions
+        - unitPrice
+        - Quantity
+        - IsOnline
+        - ShipperName
+        - ShipperOriginalID
+        - customerLocation (FK)
+        - cusomerAddress
+        - ShippedDate
+        - RequireDate
+        - OderDate
+        - Discount
+
+// trucs qui puent
+- superficie pour la dernière questions ???
+- traduction chiante à faire à la main pour toutes les valeurs possible (limitation à citer)
+
+
+((CategoryName=="Beverages") ? "Boissons" :(CategoryName=="Condiments") ? "Condiments" : (CategoryName=="Confections") ? "Confiseries" : (CategoryName=="Dairy Products") ? "Produits laitier" :(CategoryName=="Grains/Cereals") ? "Graine/Céréales" : (CategoryName=="Meat/Poultry") ? "Viande/volaile" : (CategoryName=="Produce") ? "Fruits sec" : (CategoryName=="Seafood") ? "Fruits de mer" :"NULL")

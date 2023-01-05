@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33027.164
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ProjetBIDA_ETL", "ProjetBIDA_ETL\ProjetBIDA_ETL.dtproj", "{7E3C2030-B222-4FFD-9A0B-42FCA80DF504}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E3C2030-B222-4FFD-9A0B-42FCA80DF504}.Development|Default.ActiveCfg = Development
+		{7E3C2030-B222-4FFD-9A0B-42FCA80DF504}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40D52D24-8503-4AD0-89D4-048FD2FA9B08}
+	EndGlobalSection
+EndGlobal
