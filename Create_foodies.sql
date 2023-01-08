@@ -1,7 +1,7 @@
 USE [master]
 GO
 --/****** Object:  Database [Foodies997]    Script Date: 14/11/2019 11:01:01 ******/
---CREATE DATABASE [Foodies997]
+CREATE DATABASE [Foodies997]
 -- CONTAINMENT = NONE
 -- ON  PRIMARY 
 --( NAME = N'Northwind', FILENAME = N'D:\MsSqlData\MSSQL11.STU3IG\MSSQL\DATA\northwnd.mdf' , SIZE = 5184KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
