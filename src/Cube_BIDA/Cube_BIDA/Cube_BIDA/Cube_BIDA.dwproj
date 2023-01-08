@@ -78,7 +78,7 @@
             <Value xsi:type="xsd:int">1</Value>
           </ConfigurationSetting>
         </ConnectionSecurityMappings>
-        <OutputPath>D:\TheStartOfEverything\Documents\Github\ETL_BIDA\src\ProjetBIDA_ETL\out\</OutputPath>
+        <OutputPath>D:\TheStartOfEverything\Documents\Github\ETL_BIDA\src\Cube_BIDA\out\</OutputPath>
       </Options>
     </Configuration>
   </Configurations>
