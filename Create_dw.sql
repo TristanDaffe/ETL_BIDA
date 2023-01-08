@@ -101,4 +101,5 @@ CONSTRAINT FK_CategoryKey REFERENCES dimCategory(CategoryKey),
 Quantity int NOT NULL, 
 Discount float NOT NULL, 
 isOnline bit NOT NULL,
+UnitPrice money NOT NULL,
 );

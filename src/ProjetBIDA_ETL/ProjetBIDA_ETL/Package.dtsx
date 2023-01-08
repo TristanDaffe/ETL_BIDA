@@ -11,8 +11,8 @@
   DTS:LocaleID="2060"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="139"
-  DTS:VersionGUID="{FF81EDDB-556B-4DF7-9A53-5B0E2C54DAA5}">
+  DTS:VersionBuild="142"
+  DTS:VersionGUID="{97F2E241-BA96-4C09-8813-1501C4DB69DA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -56,7 +56,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{932EA69F-3A1A-413D-82A3-D4272766BCDB}"
-          SQLTask:SqlStatementSource="IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'FoodiesDw')&#xA;  BEGIN&#xA;    CREATE DATABASE [FoodiesDw]&#xA;    END&#xA;&#xA;USE Foodies977Dw;&#xA;&#xA;DROP TABLE IF EXISTS factSales&#xA;&#xA;DROP TABLE IF EXISTS dimDate&#xA;CREATE TABLE dimDate&#xA;(&#xA;DateKey int PRIMARY Key,&#xA;DayFrenchName nvarchar(100) NOT NULL,&#xA;DayEnglishName nvarchar(100) NOT NULL,&#xA;MonthFrenchName nvarchar(100) NOT NULL,&#xA;MonthEnglishName nvarchar(100) NOT NULL,&#xA;&quot;Year&quot; int NOT NULL,&#xA;);&#xA;&#xA;&#xA;DROP TABLE IF EXISTS dimProduct&#xA;CREATE TABLE dimProduct&#xA;(&#xA;ProductKey varchar(100) PRIMARY KEY,&#xA;OriginalId int NOT NULL,&#xA;productName nvarchar(40) NOT NULL,&#xA;QuantityPerUnit varchar(100) NOT NULL,&#xA;Discontinued bit NOT NULL,&#xA;);&#xA;&#xA;&#xA;DROP TABLE IF EXISTS dimCustomer&#xA;CREATE TABLE dimCustomer&#xA;(&#xA;CustomerKey varchar(50) PRIMARY KEY,&#xA;[CompanyName] nvarchar(50),&#xA;[OriginalId] varchar(50),&#xA;[ContactName] nvarchar(50)&#xA;&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS dimEmployee&#xA;CREATE TABLE dimEmployee&#xA;(&#xA;EmployeeKey varchar(100) PRIMARY KEY,&#xA;OriginalId int NOT NULL,&#xA;LastName varchar(100) NOT NULL,&#xA;FirstName varchar(100) NOT NULL,&#xA;);&#xA;&#xA;INSERT INTO dimEmployee VALUES &#xA;('Unknown', 0, 'Unknown', 'Unknown');&#xA;&#xA;DROP TABLE IF EXISTS dimCategory&#xA;CREATE TABLE dimCategory&#xA;(&#xA;CategoryKey varchar(100) PRIMARY KEY,&#xA;OriginalId int NOT NULL,&#xA;NameEnglish varchar(100) NOT NULL,&#xA;NameFrench varchar(100) NOT NULL,&#xA;);&#xA;INSERT INTO dimCategory VALUES &#xA;(0, 0, 'Unknown', 'Unknown');&#xA;&#xA;DROP TABLE IF EXISTS dimLocation&#xA;CREATE TABLE dimLocation&#xA;(&#xA;LocationKey varchar(100) PRIMARY KEY,&#xA;City varchar(100) NOT NULL,&#xA;Country varchar(100) NOT NULL,&#xA;Region varchar(100) NOT NULL,&#xA;PostalCode varchar(100) NOT NULL,&#xA;);&#xA;&#xA;INSERT INTO dimLocation VALUES&#xA;('Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown');&#xA;&#xA;&#xA;CREATE TABLE factSales&#xA;(&#xA;SalesKey int IDENTITY(1,1) PRIMARY KEY,&#xA;OriginalId int NOT NULL,&#xA;CustomerKey varchar(50) NOT NULL &#xA;CONSTRAINT FK_CustomerKey REFERENCES dimCustomer(CustomerKey),&#xA;CustomerLocationKey varchar(100) NOT NULL&#xA;CONSTRAINT FK_CustomerLocationKey REFERENCES dimLocation(LocationKey),&#xA;SellerKey varchar(100) NOT NULL&#xA;CONSTRAINT FK_SellerKey REFERENCES dimEmployee(EmployeeKey),&#xA;OrderDateKey int NOT NULL&#xA;CONSTRAINT FK_OrderDateKey REFERENCES dimDate(DateKey),&#xA;RequiredDateKey int NOT NULL&#xA;CONSTRAINT FK_RequiredDateKey REFERENCES dimDate(DateKey),&#xA;ShipLocationKey varchar(100) NOT NULL&#xA;CONSTRAINT FK_ShipLocationKey REFERENCES dimLocation(LocationKey),&#xA;ShipperName varchar(100) NOT NULL,&#xA;ProductKey varchar(100) NOT NULL&#xA;CONSTRAINT FK_ProductKey REFERENCES dimProduct(ProductKey),&#xA;CategoryKey varchar(100) NOT NULL&#xA;CONSTRAINT FK_CategoryKey REFERENCES dimCategory(CategoryKey),&#xA;Quantity int NOT NULL, &#xA;Discount float NOT NULL, &#xA;isOnline bit NOT NULL,&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'FoodiesDw')&#xA;  BEGIN&#xA;    CREATE DATABASE [FoodiesDw]&#xA;    END&#xA;&#xA;USE Foodies977Dw;&#xA;&#xA;DROP TABLE IF EXISTS factSales&#xA;&#xA;DROP TABLE IF EXISTS dimDate&#xA;CREATE TABLE dimDate&#xA;(&#xA;DateKey int PRIMARY Key,&#xA;DayFrenchName nvarchar(100) NOT NULL,&#xA;DayEnglishName nvarchar(100) NOT NULL,&#xA;MonthFrenchName nvarchar(100) NOT NULL,&#xA;MonthEnglishName nvarchar(100) NOT NULL,&#xA;&quot;Year&quot; int NOT NULL,&#xA;);&#xA;&#xA;&#xA;DROP TABLE IF EXISTS dimProduct&#xA;CREATE TABLE dimProduct&#xA;(&#xA;ProductKey varchar(100) PRIMARY KEY,&#xA;OriginalId int NOT NULL,&#xA;productName nvarchar(40) NOT NULL,&#xA;QuantityPerUnit varchar(100) NOT NULL,&#xA;Discontinued bit NOT NULL,&#xA;);&#xA;&#xA;&#xA;DROP TABLE IF EXISTS dimCustomer&#xA;CREATE TABLE dimCustomer&#xA;(&#xA;CustomerKey varchar(50) PRIMARY KEY,&#xA;[CompanyName] nvarchar(50),&#xA;[OriginalId] varchar(50),&#xA;[ContactName] nvarchar(50)&#xA;&#xA;);&#xA;&#xA;DROP TABLE IF EXISTS dimEmployee&#xA;CREATE TABLE dimEmployee&#xA;(&#xA;EmployeeKey varchar(100) PRIMARY KEY,&#xA;OriginalId int NOT NULL,&#xA;LastName varchar(100) NOT NULL,&#xA;FirstName varchar(100) NOT NULL,&#xA;);&#xA;&#xA;INSERT INTO dimEmployee (EmployeeKey, OriginalId, LastName, FirstName)&#xA;VALUES ('Unknown', 0, 'Unknown', 'Unknown');&#xA;&#xA;DROP TABLE IF EXISTS dimCategory&#xA;CREATE TABLE dimCategory&#xA;(&#xA;CategoryKey varchar(100) PRIMARY KEY,&#xA;OriginalId int NOT NULL,&#xA;NameEnglish varchar(100) NOT NULL,&#xA;NameFrench varchar(100) NOT NULL,&#xA;);&#xA;INSERT INTO dimCategory (CategoryKey, OriginalId, NameEnglish, NameFrench)&#xA;VALUES (0, 0, 'Unknown', 'Unknown');&#xA;&#xA;DROP TABLE IF EXISTS dimLocation&#xA;CREATE TABLE dimLocation&#xA;(&#xA;LocationKey varchar(100) PRIMARY KEY,&#xA;City varchar(100) NOT NULL,&#xA;Country varchar(100) NOT NULL,&#xA;Region varchar(100) NOT NULL,&#xA;PostalCode varchar(100) NOT NULL,&#xA;);&#xA;&#xA;INSERT INTO dimLocation VALUES&#xA;('Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown');&#xA;&#xA;&#xA;CREATE TABLE factSales&#xA;(&#xA;SalesKey int IDENTITY(1,1) PRIMARY KEY,&#xA;OriginalId int NOT NULL,&#xA;CustomerKey varchar(50) NOT NULL &#xA;CONSTRAINT FK_CustomerKey REFERENCES dimCustomer(CustomerKey),&#xA;CustomerLocationKey varchar(100) NOT NULL&#xA;CONSTRAINT FK_CustomerLocationKey REFERENCES dimLocation(LocationKey),&#xA;SellerKey varchar(100) NOT NULL&#xA;CONSTRAINT FK_SellerKey REFERENCES dimEmployee(EmployeeKey),&#xA;OrderDateKey int NOT NULL&#xA;CONSTRAINT FK_OrderDateKey REFERENCES dimDate(DateKey),&#xA;RequiredDateKey int NOT NULL&#xA;CONSTRAINT FK_RequiredDateKey REFERENCES dimDate(DateKey),&#xA;ShipLocationKey varchar(100) NOT NULL&#xA;CONSTRAINT FK_ShipLocationKey REFERENCES dimLocation(LocationKey),&#xA;ShipperName varchar(100) NOT NULL,&#xA;ProductKey varchar(100) NOT NULL&#xA;CONSTRAINT FK_ProductKey REFERENCES dimProduct(ProductKey),&#xA;CategoryKey varchar(100) NOT NULL&#xA;CONSTRAINT FK_CategoryKey REFERENCES dimCategory(CategoryKey),&#xA;Quantity int NOT NULL, &#xA;Discount float NOT NULL, &#xA;isOnline bit NOT NULL,&#xA;UnitPrice money NOT NULL,&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -6788,6 +6788,12 @@ where [refTable].[LocationKey] = ?</property>
                       cachedName="OrderDateKey"
                       externalMetadataColumnId="Package\FactSale\Destination FactSale.Inputs[Entrée de destination OLE DB].ExternalColumns[OrderDateKey]"
                       lineageId="Package\FactSale\Union All Categories.Outputs[Unir tout sortie 1].Columns[OrderDateKey]" />
+                    <inputColumn
+                      refId="Package\FactSale\Destination FactSale.Inputs[Entrée de destination OLE DB].Columns[UnitPrice]"
+                      cachedDataType="cy"
+                      cachedName="UnitPrice"
+                      externalMetadataColumnId="Package\FactSale\Destination FactSale.Inputs[Entrée de destination OLE DB].ExternalColumns[UnitPrice]"
+                      lineageId="Package\FactSale\Union All Categories.Outputs[Unir tout sortie 1].Columns[UnitPrice]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -6861,6 +6867,10 @@ where [refTable].[LocationKey] = ?</property>
                       refId="Package\FactSale\Destination FactSale.Inputs[Entrée de destination OLE DB].ExternalColumns[RequiredDateKey]"
                       dataType="i4"
                       name="RequiredDateKey" />
+                    <externalMetadataColumn
+                      refId="Package\FactSale\Destination FactSale.Inputs[Entrée de destination OLE DB].ExternalColumns[UnitPrice]"
+                      dataType="cy"
+                      name="UnitPrice" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -7556,7 +7566,7 @@ where [refTable].[DateKey] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
-                  name="ParameterMap">#{Package\FactSale\2230:invalid};</property>
+                  name="ParameterMap">#{Package\FactSale\Source SaleInfos.Outputs[Sortie de source OLE DB].ExternalColumns[UnitPrice]};</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -9718,7 +9728,7 @@ where [refTable].[LocationKey] = ?</property>
                   dataType="System.String"
                   description="Commande SQL à exécuter."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT o.*, d.ProductID, d.Discount, d.Quantity from Orders o, [Order Details] d
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT o.*, d.ProductID,d.UnitPrice, d.Discount, d.Quantity from Orders o, [Order Details] d
 WHERE o.OrderID = d.OrderID;</property>
                 <property
                   dataType="System.String"
@@ -9905,6 +9915,15 @@ WHERE o.OrderID = d.OrderID;</property>
                       lineageId="Package\FactSale\Source SaleInfos.Outputs[Sortie de source OLE DB].Columns[ShipVia]"
                       name="ShipVia"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FactSale\Source SaleInfos.Outputs[Sortie de source OLE DB].Columns[UnitPrice]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FactSale\Source SaleInfos.Outputs[Sortie de source OLE DB].ExternalColumns[UnitPrice]"
+                      lineageId="Package\FactSale\Source SaleInfos.Outputs[Sortie de source OLE DB].Columns[UnitPrice]"
+                      name="UnitPrice"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -9987,6 +10006,10 @@ WHERE o.OrderID = d.OrderID;</property>
                       refId="Package\FactSale\Source SaleInfos.Outputs[Sortie de source OLE DB].ExternalColumns[Quantity]"
                       dataType="i2"
                       name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\FactSale\Source SaleInfos.Outputs[Sortie de source OLE DB].ExternalColumns[UnitPrice]"
+                      dataType="cy"
+                      name="UnitPrice" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -10081,6 +10104,11 @@ WHERE o.OrderID = d.OrderID;</property>
                       lineageId="Package\FactSale\Source SaleInfos.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                    <outputColumn
+                      refId="Package\FactSale\Source SaleInfos.Outputs[Sortie d'erreur de source OLE DB].Columns[UnitPrice]"
+                      dataType="cy"
+                      lineageId="Package\FactSale\Source SaleInfos.Outputs[Sortie d'erreur de source OLE DB].Columns[UnitPrice]"
+                      name="UnitPrice" />
                     <outputColumn
                       refId="Package\FactSale\Source SaleInfos.Outputs[Sortie d'erreur de source OLE DB].Columns[ShipName]"
                       dataType="wstr"
@@ -20987,44 +21015,44 @@ WHERE o.OrderID = d.OrderID;</property>
               startId="Package\FactSale\Derived Empty Product.Outputs[Derived Column Output]" />
             <path
               refId="Package\FactSale.Paths[Derived Column Output7]"
-              endId="Package\FactSale\Union All Employee.Inputs[Entrée Union All 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty Employee.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output6]"
-              endId="Package\FactSale\Union All RequiredDate.Inputs[Unir tout entrée 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty RequiredDate.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output5]"
-              endId="Package\FactSale\Union All CustomerLocation.Inputs[Unir tout entrée 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty CustomerLocation.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output8]"
-              endId="Package\FactSale\Union ALL DateOrder.Inputs[Entrée Union All 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty DateOrder.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output3]"
-              endId="Package\FactSale\DimDateOrder lookup.Inputs[Entrée de recherche]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Date keys.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output2]"
-              endId="Package\FactSale\Union All Categories.Inputs[Entrée Union All 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty Category.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output1]"
               endId="Package\FactSale\Union All ShipLocation.Inputs[Entrée Union All 1]"
               name="Derived Column Output"
               startId="Package\FactSale\Derived Empty ShipLocation.Outputs[Derived Column Output]" />
             <path
-              refId="Package\FactSale.Paths[Derived Column Output4]"
+              refId="Package\FactSale.Paths[Derived Column Output6]"
+              endId="Package\FactSale\Union All Categories.Inputs[Entrée Union All 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty Category.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output5]"
+              endId="Package\FactSale\DimDateOrder lookup.Inputs[Entrée de recherche]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Date keys.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output8]"
               endId="Package\FactSale\Unir tout 7.Inputs[Unir tout entrée 1]"
               name="Derived Column Output"
               startId="Package\FactSale\Derived Empty Customer.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output3]"
+              endId="Package\FactSale\Union All CustomerLocation.Inputs[Unir tout entrée 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty CustomerLocation.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output2]"
+              endId="Package\FactSale\Union All RequiredDate.Inputs[Unir tout entrée 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty RequiredDate.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output1]"
+              endId="Package\FactSale\Union All Employee.Inputs[Entrée Union All 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty Employee.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output4]"
+              endId="Package\FactSale\Union ALL DateOrder.Inputs[Entrée Union All 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty DateOrder.Outputs[Derived Column Output]" />
             <path
               refId="Package\FactSale.Paths[Lookup Match Output]"
               endId="Package\FactSale\Union All Employee.Inputs[Unir tout entrée 1]"
@@ -21062,34 +21090,34 @@ WHERE o.OrderID = d.OrderID;</property>
               startId="Package\FactSale\Customer lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\FactSale.Paths[Lookup No Match Output4]"
-              endId="Package\FactSale\Derived Empty ShipLocation.Inputs[Derived Column Input]"
-              name="Lookup No Match Output"
-              startId="Package\FactSale\ShipLocation Lookup.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\FactSale.Paths[Lookup No Match Output3]"
-              endId="Package\FactSale\Derived Empty Customer.Inputs[Derived Column Input]"
-              name="Lookup No Match Output"
-              startId="Package\FactSale\Customer.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\FactSale.Paths[Lookup No Match Output5]"
-              endId="Package\FactSale\Derived Empty Product.Inputs[Derived Column Input]"
-              name="Lookup No Match Output"
-              startId="Package\FactSale\Product Lookup.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\FactSale.Paths[Lookup No Match Output1]"
-              endId="Package\FactSale\Derived Empty CustomerLocation.Inputs[Derived Column Input]"
-              name="Lookup No Match Output"
-              startId="Package\FactSale\CustomerLocation Lookup.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\FactSale.Paths[Lookup No Match Output]"
               endId="Package\FactSale\Derived Empty Employee.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
               startId="Package\FactSale\Employee Lookup.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\FactSale.Paths[Lookup No Match Output2]"
+              refId="Package\FactSale.Paths[Lookup No Match Output3]"
+              endId="Package\FactSale\Derived Empty CustomerLocation.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\FactSale\CustomerLocation Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\FactSale.Paths[Lookup No Match Output5]"
               endId="Package\FactSale\Derived Empty Category.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
               startId="Package\FactSale\Category Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\FactSale.Paths[Lookup No Match Output1]"
+              endId="Package\FactSale\Derived Empty Customer.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\FactSale\Customer.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\FactSale.Paths[Lookup No Match Output]"
+              endId="Package\FactSale\Derived Empty ShipLocation.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\FactSale\ShipLocation Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\FactSale.Paths[Lookup No Match Output2]"
+              endId="Package\FactSale\Derived Empty Product.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\FactSale\Product Lookup.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\FactSale.Paths[Output 0]"
               endId="Package\FactSale\Derived Date keys.Inputs[Derived Column Input]"
@@ -21122,19 +21150,19 @@ WHERE o.OrderID = d.OrderID;</property>
               startId="Package\FactSale\CustomerLocationID.Outputs[Sortie de colonne dérivée]" />
             <path
               refId="Package\FactSale.Paths[Sortie de recherche avec correspondance1]"
-              endId="Package\FactSale\Union ALL DateOrder.Inputs[Unir tout entrée 1]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\FactSale\DimDateOrder lookup.Outputs[Sortie de recherche avec correspondance]" />
-            <path
-              refId="Package\FactSale.Paths[Sortie de recherche avec correspondance2]"
               endId="Package\FactSale\Customer lookup.Inputs[Lookup Input]"
               name="Sortie de recherche avec correspondance"
               startId="Package\FactSale\Product lookup.Outputs[Sortie de recherche avec correspondance]" />
             <path
-              refId="Package\FactSale.Paths[Sortie de recherche avec correspondance]"
+              refId="Package\FactSale.Paths[Sortie de recherche avec correspondance2]"
               endId="Package\FactSale\Union All RequiredDate.Inputs[Entrée Union All 1]"
               name="Sortie de recherche avec correspondance"
               startId="Package\FactSale\RequiredDate lookup.Outputs[Sortie de recherche avec correspondance]" />
+            <path
+              refId="Package\FactSale.Paths[Sortie de recherche avec correspondance]"
+              endId="Package\FactSale\Union ALL DateOrder.Inputs[Unir tout entrée 1]"
+              name="Sortie de recherche avec correspondance"
+              startId="Package\FactSale\DimDateOrder lookup.Outputs[Sortie de recherche avec correspondance]" />
             <path
               refId="Package\FactSale.Paths[Sortie de recherche sans correspondance]"
               endId="Package\FactSale\Derived Empty RequiredDate.Inputs[Derived Column Input]"
@@ -21152,44 +21180,44 @@ WHERE o.OrderID = d.OrderID;</property>
               startId="Package\FactSale\Source SaleInfos.Outputs[Sortie de source OLE DB]" />
             <path
               refId="Package\FactSale.Paths[Unir tout sortie 17]"
+              endId="Package\FactSale\Employee Lookup.Inputs[Lookup Input]"
+              name="Unir tout sortie 1"
+              startId="Package\FactSale\Union All Product.Outputs[Unir tout sortie 1]" />
+            <path
+              refId="Package\FactSale.Paths[Unir tout sortie 1]"
               endId="Package\FactSale\ShipLocationID.Inputs[Entrée de colonne dérivée]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All CustomerLocation.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 1]"
+              refId="Package\FactSale.Paths[Unir tout sortie 11]"
               endId="Package\FactSale\RequiredDate lookup.Inputs[Entrée de recherche]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union ALL DateOrder.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 11]"
+              refId="Package\FactSale.Paths[Unir tout sortie 12]"
               endId="Package\FactSale\CustomerLocationID.Inputs[Entrée de colonne dérivée]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All Employee.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 12]"
+              refId="Package\FactSale.Paths[Unir tout sortie 13]"
               endId="Package\FactSale\Category Lookup.Inputs[Lookup Input]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Unir tout 7.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 13]"
+              refId="Package\FactSale.Paths[Unir tout sortie 14]"
               endId="Package\FactSale\Convert CustomerID.Inputs[Entrée de colonne dérivée]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All ShipLocation.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 14]"
+              refId="Package\FactSale.Paths[Unir tout sortie 15]"
               endId="Package\FactSale\ShipName Conversion.Inputs[Entrée de colonne dérivée]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All Categories.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 15]"
+              refId="Package\FactSale.Paths[Unir tout sortie 16]"
               endId="Package\FactSale\Sale infos conversion Script.Inputs[Input 0]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All.Outputs[Unir tout sortie 1]" />
-            <path
-              refId="Package\FactSale.Paths[Unir tout sortie 16]"
-              endId="Package\FactSale\Employee Lookup.Inputs[Lookup Input]"
-              name="Unir tout sortie 1"
-              startId="Package\FactSale\Union All Product.Outputs[Unir tout sortie 1]" />
             <path
               refId="Package\FactSale.Paths[Unir tout sortie 18]"
               endId="Package\FactSale\Product Lookup.Inputs[Lookup Input]"
@@ -21585,7 +21613,7 @@ WHERE o.OrderID = d.OrderID;</property>
     design-time-name="Package\DimCustomer">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="133,42"
           Id="Package\DimCustomer\Derived Ids"
@@ -21621,7 +21649,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21643,7 +21673,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21665,7 +21697,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -21916,7 +21950,7 @@ WHERE o.OrderID = d.OrderID;</property>
     design-time-name="Package\DimEmployee">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="198,42"
           Id="Package\DimEmployee\Destination dimEmployee"
@@ -21952,7 +21986,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21974,7 +22010,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21996,7 +22034,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -22032,7 +22072,7 @@ WHERE o.OrderID = d.OrderID;</property>
     design-time-name="Package\DimLocation">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="163,42"
           Id="Package\DimLocation\Source customers"
@@ -22080,7 +22120,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22114,7 +22156,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22148,7 +22192,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22170,7 +22216,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22192,7 +22240,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22214,7 +22264,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -22532,40 +22584,6 @@ WHERE o.OrderID = d.OrderID;</property>
           TopLeft="820.777777777777,579.482905982904" />
         <EdgeLayout
           Id="Package\FactSale.Paths[Unir tout sortie 13]"
-          TopLeft="1417.55555555556,215.111111111111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-152.449494949497,-38.45202020202"
-              Start="0,0"
-              End="-152.449494949497,-30.95202020202">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-18.8621864168296" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-18.8621864168296"
-                    Point2="0,-22.8621864168296"
-                    Point3="-4,-22.8621864168296" />
-                  <mssgle:LineSegment
-                    End="-148.449494949497,-22.8621864168296" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-148.449494949497,-22.8621864168296"
-                    Point2="-152.449494949497,-22.8621864168296"
-                    Point3="-152.449494949497,-26.8621864168296" />
-                  <mssgle:LineSegment
-                    End="-152.449494949497,-30.95202020202" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 12]"
           TopLeft="1696.22222222222,92.3333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22599,7 +22617,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 11]"
+          Id="Package\FactSale.Paths[Unir tout sortie 12]"
           TopLeft="893.166666666667,458">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22621,7 +22639,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 1]"
+          Id="Package\FactSale.Paths[Unir tout sortie 11]"
           TopLeft="315.555555555556,264.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22634,6 +22652,28 @@ WHERE o.OrderID = d.OrderID;</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,-56.405982905983" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Unir tout sortie 1]"
+          TopLeft="1376.27777777778,501">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-39.072649572651"
+              Start="0,0"
+              End="0,-31.572649572651">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-31.572649572651" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22738,54 +22778,6 @@ WHERE o.OrderID = d.OrderID;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FactSale.Paths[Sortie de recherche avec correspondance2]"
-          TopLeft="115.527777777778,391.722222222221">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,20.4453125,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance1]"
-          TopLeft="314.638888888889,382.594017094016">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,-76.260683760683"
-              Start="0,0"
-              End="0,-68.760683760683">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-68.760683760683" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,-40.1850293803415,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance]"
           TopLeft="343.111111111112,158.42735042735">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22817,6 +22809,54 @@ WHERE o.OrderID = d.OrderID;</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="33.2118771701387,-16.5229946114603,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance1]"
+          TopLeft="115.527777777778,391.722222222221">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,20.4453125,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance]"
+          TopLeft="314.638888888889,382.594017094016">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-76.260683760683"
+              Start="0,0"
+              End="0,-68.760683760683">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-68.760683760683" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,-40.1850293803415,183.3540234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -22966,6 +23006,78 @@ WHERE o.OrderID = d.OrderID;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FactSale.Paths[Lookup No Match Output5]"
+          TopLeft="1733.33333333333,205.371794871793">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="130.888888888888,0"
+              Start="0,0"
+              End="123.388888888888,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="123.388888888888,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-122.30638671875,29.3609022556391,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Lookup No Match Output4]"
+          TopLeft="947.111111111111,329.927350427349">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="99.999999999999,0"
+              Start="0,0"
+              End="92.499999999999,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="92.499999999999,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-9.55638671875051,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Lookup No Match Output3]"
+          TopLeft="1021.77777777778,596.927350427349">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="271.333333333333,0"
+              Start="0,0"
+              End="263.833333333333,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="263.833333333333,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="76.1102799479165,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Lookup No Match Output2]"
           TopLeft="917.111111111111,78.3717948717936">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22989,7 +23101,31 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output4]"
+          Id="Package\FactSale.Paths[Lookup No Match Output1]"
+          TopLeft="1391.88888888889,134.371794871793">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-40.7051282051263"
+              Start="0,0"
+              End="0,-33.2051282051263">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-33.2051282051263" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,-22.4072516025632,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Lookup No Match Output]"
           TopLeft="1380,325.482905982905">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23021,102 +23157,6 @@ WHERE o.OrderID = d.OrderID;</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-125.30638671875,29.3243243243243,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output3]"
-          TopLeft="1391.88888888889,134.371794871793">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,-40.7051282051263"
-              Start="0,0"
-              End="0,-33.2051282051263">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-33.2051282051263" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,-22.4072516025632,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output2]"
-          TopLeft="1733.33333333333,205.371794871793">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="130.888888888888,0"
-              Start="0,0"
-              End="123.388888888888,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="123.388888888888,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-122.30638671875,29.3609022556391,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output1]"
-          TopLeft="1021.77777777778,596.927350427349">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="271.333333333333,0"
-              Start="0,0"
-              End="263.833333333333,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="263.833333333333,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="76.1102799479165,5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output]"
-          TopLeft="947.111111111111,329.927350427349">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="99.999999999999,0"
-              Start="0,0"
-              End="92.499999999999,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="92.499999999999,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-9.55638671875051,5,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -23338,106 +23378,6 @@ WHERE o.OrderID = d.OrderID;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FactSale.Paths[Derived Column Output8]"
-          TopLeft="505.555555555556,282.40811965812">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-99.888888888889,0"
-              Start="0,0"
-              End="-92.388888888889,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-92.388888888889,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output7]"
-          TopLeft="1145.61111111111,348.427350427349">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-225.388888888888,67.572649572651"
-              Start="0,0"
-              End="-225.388888888888,60.072649572651">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.1655609347926" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.1655609347926"
-                    Point2="0,40.1655609347926"
-                    Point3="-4,40.1655609347926" />
-                  <mssgle:LineSegment
-                    End="-221.388888888888,40.1655609347926" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-221.388888888888,40.1655609347926"
-                    Point2="-225.388888888888,40.1655609347926"
-                    Point3="-225.388888888888,44.1655609347926" />
-                  <mssgle:LineSegment
-                    End="-225.388888888888,60.072649572651" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output6]"
-          TopLeft="418.111111111111,83.6480186480185">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="80.7777777777781,0"
-              Start="0,0"
-              End="73.2777777777781,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="73.2777777777781,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output5]"
-          TopLeft="1408.88888888889,572.371794871793">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,-29.371794871793"
-              Start="0,0"
-              End="0,-21.871794871793">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-21.871794871793" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output4]"
           TopLeft="1486.66666666667,72">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23459,19 +23399,19 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output3]"
-          TopLeft="341.694444444444,467.594017094016">
+          Id="Package\FactSale.Paths[Derived Column Output7]"
+          TopLeft="1227.44444444444,232.963675213674">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-43"
+              EndConnector="98.11111111112,0"
               Start="0,0"
-              End="0,-35.5">
+              End="90.61111111112,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-35.5" />
+                    End="90.61111111112,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23481,7 +23421,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output2]"
+          Id="Package\FactSale.Paths[Derived Column Output6]"
           TopLeft="1960.72222222222,226.371794871793">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23515,19 +23455,119 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output1]"
-          TopLeft="1227.44444444444,232.963675213674">
+          Id="Package\FactSale.Paths[Derived Column Output5]"
+          TopLeft="341.694444444444,467.594017094016">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="98.11111111112,0"
+              EndConnector="0,-43"
               Start="0,0"
-              End="90.61111111112,0">
+              End="0,-35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="90.61111111112,0" />
+                    End="0,-35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Derived Column Output4]"
+          TopLeft="505.555555555556,282.40811965812">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-99.888888888889,0"
+              Start="0,0"
+              End="-92.388888888889,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-92.388888888889,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Derived Column Output3]"
+          TopLeft="1408.88888888889,572.371794871793">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-29.371794871793"
+              Start="0,0"
+              End="0,-21.871794871793">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-21.871794871793" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Derived Column Output2]"
+          TopLeft="418.111111111111,83.6480186480185">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="80.7777777777781,0"
+              Start="0,0"
+              End="73.2777777777781,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="73.2777777777781,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Derived Column Output1]"
+          TopLeft="1145.61111111111,348.427350427349">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-225.388888888888,67.572649572651"
+              Start="0,0"
+              End="-225.388888888888,60.072649572651">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.1655609347926" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.1655609347926"
+                    Point2="0,40.1655609347926"
+                    Point3="-4,40.1655609347926" />
+                  <mssgle:LineSegment
+                    End="-221.388888888888,40.1655609347926" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-221.388888888888,40.1655609347926"
+                    Point2="-225.388888888888,40.1655609347926"
+                    Point3="-225.388888888888,44.1655609347926" />
+                  <mssgle:LineSegment
+                    End="-225.388888888888,60.072649572651" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23594,28 +23634,6 @@ WHERE o.OrderID = d.OrderID;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\FactSale.Paths[Unir tout sortie 17]"
-          TopLeft="1376.27777777778,501">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,-39.072649572651"
-              Start="0,0"
-              End="0,-31.572649572651">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-31.572649572651" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 16]"
           TopLeft="866.888888888889,244.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23637,7 +23655,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 15]"
+          Id="Package\FactSale.Paths[Unir tout sortie 16]"
           TopLeft="177.666666666667,572.533119658119">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23659,7 +23677,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 14]"
+          Id="Package\FactSale.Paths[Unir tout sortie 15]"
           TopLeft="1808.94444444444,342">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23672,6 +23690,40 @@ WHERE o.OrderID = d.OrderID;</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,23.944444444444" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Unir tout sortie 14]"
+          TopLeft="1417.55555555556,215.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-152.449494949497,-38.45202020202"
+              Start="0,0"
+              End="-152.449494949497,-30.95202020202">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-18.8621864168296" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-18.8621864168296"
+                    Point2="0,-22.8621864168296"
+                    Point3="-4,-22.8621864168296" />
+                  <mssgle:LineSegment
+                    End="-148.449494949497,-22.8621864168296" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-148.449494949497,-22.8621864168296"
+                    Point2="-152.449494949497,-22.8621864168296"
+                    Point3="-152.449494949497,-26.8621864168296" />
+                  <mssgle:LineSegment
+                    End="-152.449494949497,-30.95202020202" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
