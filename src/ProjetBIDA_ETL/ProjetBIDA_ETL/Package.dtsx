@@ -11,8 +11,8 @@
   DTS:LocaleID="2060"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="138"
-  DTS:VersionGUID="{A5DF4B5A-D5F7-4A0D-A2C4-4BBA55147ECA}">
+  DTS:VersionBuild="139"
+  DTS:VersionGUID="{FF81EDDB-556B-4DF7-9A53-5B0E2C54DAA5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -7556,7 +7556,7 @@ where [refTable].[DateKey] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
-                  name="ParameterMap">#{Package\FactSale\2232:invalid};</property>
+                  name="ParameterMap">#{Package\FactSale\2230:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -20987,44 +20987,44 @@ WHERE o.OrderID = d.OrderID;</property>
               startId="Package\FactSale\Derived Empty Product.Outputs[Derived Column Output]" />
             <path
               refId="Package\FactSale.Paths[Derived Column Output7]"
-              endId="Package\FactSale\Union All ShipLocation.Inputs[Entrée Union All 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty ShipLocation.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output6]"
-              endId="Package\FactSale\Union All Categories.Inputs[Entrée Union All 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty Category.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output5]"
-              endId="Package\FactSale\DimDateOrder lookup.Inputs[Entrée de recherche]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Date keys.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output8]"
-              endId="Package\FactSale\Unir tout 7.Inputs[Unir tout entrée 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty Customer.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output3]"
-              endId="Package\FactSale\Union All CustomerLocation.Inputs[Unir tout entrée 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty CustomerLocation.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output2]"
-              endId="Package\FactSale\Union All RequiredDate.Inputs[Unir tout entrée 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty RequiredDate.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output1]"
               endId="Package\FactSale\Union All Employee.Inputs[Entrée Union All 1]"
               name="Derived Column Output"
               startId="Package\FactSale\Derived Empty Employee.Outputs[Derived Column Output]" />
             <path
-              refId="Package\FactSale.Paths[Derived Column Output4]"
+              refId="Package\FactSale.Paths[Derived Column Output6]"
+              endId="Package\FactSale\Union All RequiredDate.Inputs[Unir tout entrée 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty RequiredDate.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output5]"
+              endId="Package\FactSale\Union All CustomerLocation.Inputs[Unir tout entrée 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty CustomerLocation.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output8]"
               endId="Package\FactSale\Union ALL DateOrder.Inputs[Entrée Union All 1]"
               name="Derived Column Output"
               startId="Package\FactSale\Derived Empty DateOrder.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output3]"
+              endId="Package\FactSale\DimDateOrder lookup.Inputs[Entrée de recherche]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Date keys.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output2]"
+              endId="Package\FactSale\Union All Categories.Inputs[Entrée Union All 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty Category.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output1]"
+              endId="Package\FactSale\Union All ShipLocation.Inputs[Entrée Union All 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty ShipLocation.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output4]"
+              endId="Package\FactSale\Unir tout 7.Inputs[Unir tout entrée 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty Customer.Outputs[Derived Column Output]" />
             <path
               refId="Package\FactSale.Paths[Lookup Match Output]"
               endId="Package\FactSale\Union All Employee.Inputs[Unir tout entrée 1]"
@@ -21062,34 +21062,34 @@ WHERE o.OrderID = d.OrderID;</property>
               startId="Package\FactSale\Customer lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\FactSale.Paths[Lookup No Match Output4]"
-              endId="Package\FactSale\Derived Empty Employee.Inputs[Derived Column Input]"
-              name="Lookup No Match Output"
-              startId="Package\FactSale\Employee Lookup.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\FactSale.Paths[Lookup No Match Output3]"
-              endId="Package\FactSale\Derived Empty CustomerLocation.Inputs[Derived Column Input]"
-              name="Lookup No Match Output"
-              startId="Package\FactSale\CustomerLocation Lookup.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\FactSale.Paths[Lookup No Match Output5]"
-              endId="Package\FactSale\Derived Empty Category.Inputs[Derived Column Input]"
-              name="Lookup No Match Output"
-              startId="Package\FactSale\Category Lookup.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\FactSale.Paths[Lookup No Match Output1]"
-              endId="Package\FactSale\Derived Empty Customer.Inputs[Derived Column Input]"
-              name="Lookup No Match Output"
-              startId="Package\FactSale\Customer.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\FactSale.Paths[Lookup No Match Output]"
               endId="Package\FactSale\Derived Empty ShipLocation.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
               startId="Package\FactSale\ShipLocation Lookup.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\FactSale.Paths[Lookup No Match Output2]"
+              refId="Package\FactSale.Paths[Lookup No Match Output3]"
+              endId="Package\FactSale\Derived Empty Customer.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\FactSale\Customer.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\FactSale.Paths[Lookup No Match Output5]"
               endId="Package\FactSale\Derived Empty Product.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
               startId="Package\FactSale\Product Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\FactSale.Paths[Lookup No Match Output1]"
+              endId="Package\FactSale\Derived Empty CustomerLocation.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\FactSale\CustomerLocation Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\FactSale.Paths[Lookup No Match Output]"
+              endId="Package\FactSale\Derived Empty Employee.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\FactSale\Employee Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\FactSale.Paths[Lookup No Match Output2]"
+              endId="Package\FactSale\Derived Empty Category.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\FactSale\Category Lookup.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\FactSale.Paths[Output 0]"
               endId="Package\FactSale\Derived Date keys.Inputs[Derived Column Input]"
@@ -21122,19 +21122,19 @@ WHERE o.OrderID = d.OrderID;</property>
               startId="Package\FactSale\CustomerLocationID.Outputs[Sortie de colonne dérivée]" />
             <path
               refId="Package\FactSale.Paths[Sortie de recherche avec correspondance1]"
-              endId="Package\FactSale\Union All RequiredDate.Inputs[Entrée Union All 1]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\FactSale\RequiredDate lookup.Outputs[Sortie de recherche avec correspondance]" />
-            <path
-              refId="Package\FactSale.Paths[Sortie de recherche avec correspondance2]"
               endId="Package\FactSale\Union ALL DateOrder.Inputs[Unir tout entrée 1]"
               name="Sortie de recherche avec correspondance"
               startId="Package\FactSale\DimDateOrder lookup.Outputs[Sortie de recherche avec correspondance]" />
             <path
-              refId="Package\FactSale.Paths[Sortie de recherche avec correspondance]"
+              refId="Package\FactSale.Paths[Sortie de recherche avec correspondance2]"
               endId="Package\FactSale\Customer lookup.Inputs[Lookup Input]"
               name="Sortie de recherche avec correspondance"
               startId="Package\FactSale\Product lookup.Outputs[Sortie de recherche avec correspondance]" />
+            <path
+              refId="Package\FactSale.Paths[Sortie de recherche avec correspondance]"
+              endId="Package\FactSale\Union All RequiredDate.Inputs[Entrée Union All 1]"
+              name="Sortie de recherche avec correspondance"
+              startId="Package\FactSale\RequiredDate lookup.Outputs[Sortie de recherche avec correspondance]" />
             <path
               refId="Package\FactSale.Paths[Sortie de recherche sans correspondance]"
               endId="Package\FactSale\Derived Empty RequiredDate.Inputs[Derived Column Input]"
@@ -21152,44 +21152,44 @@ WHERE o.OrderID = d.OrderID;</property>
               startId="Package\FactSale\Source SaleInfos.Outputs[Sortie de source OLE DB]" />
             <path
               refId="Package\FactSale.Paths[Unir tout sortie 17]"
+              endId="Package\FactSale\ShipLocationID.Inputs[Entrée de colonne dérivée]"
+              name="Unir tout sortie 1"
+              startId="Package\FactSale\Union All CustomerLocation.Outputs[Unir tout sortie 1]" />
+            <path
+              refId="Package\FactSale.Paths[Unir tout sortie 1]"
               endId="Package\FactSale\RequiredDate lookup.Inputs[Entrée de recherche]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union ALL DateOrder.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 1]"
+              refId="Package\FactSale.Paths[Unir tout sortie 11]"
               endId="Package\FactSale\CustomerLocationID.Inputs[Entrée de colonne dérivée]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All Employee.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 11]"
+              refId="Package\FactSale.Paths[Unir tout sortie 12]"
               endId="Package\FactSale\Category Lookup.Inputs[Lookup Input]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Unir tout 7.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 12]"
+              refId="Package\FactSale.Paths[Unir tout sortie 13]"
               endId="Package\FactSale\Convert CustomerID.Inputs[Entrée de colonne dérivée]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All ShipLocation.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 13]"
+              refId="Package\FactSale.Paths[Unir tout sortie 14]"
               endId="Package\FactSale\ShipName Conversion.Inputs[Entrée de colonne dérivée]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All Categories.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 14]"
+              refId="Package\FactSale.Paths[Unir tout sortie 15]"
               endId="Package\FactSale\Sale infos conversion Script.Inputs[Input 0]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 15]"
+              refId="Package\FactSale.Paths[Unir tout sortie 16]"
               endId="Package\FactSale\Employee Lookup.Inputs[Lookup Input]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All Product.Outputs[Unir tout sortie 1]" />
-            <path
-              refId="Package\FactSale.Paths[Unir tout sortie 16]"
-              endId="Package\FactSale\ShipLocationID.Inputs[Entrée de colonne dérivée]"
-              name="Unir tout sortie 1"
-              startId="Package\FactSale\Union All CustomerLocation.Outputs[Unir tout sortie 1]" />
             <path
               refId="Package\FactSale.Paths[Unir tout sortie 18]"
               endId="Package\FactSale\Product Lookup.Inputs[Lookup Input]"
@@ -21275,7 +21275,7 @@ WHERE o.OrderID = d.OrderID;</property>
           Id="Package\Create DB SQL"
           TopLeft="39,13" />
         <NodeLayout
-          Size="151,42"
+          Size="140,42"
           Id="Package\DimCategory"
           TopLeft="430.5,114.5" />
         <NodeLayout
@@ -21326,7 +21326,7 @@ WHERE o.OrderID = d.OrderID;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="506.75,48.5">
+          TopLeft="504,48.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -21585,7 +21585,7 @@ WHERE o.OrderID = d.OrderID;</property>
     design-time-name="Package\DimCustomer">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="133,42"
           Id="Package\DimCustomer\Derived Ids"
@@ -21621,9 +21621,7 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21645,9 +21643,7 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21669,9 +21665,7 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -22269,19 +22263,19 @@ WHERE o.OrderID = d.OrderID;</property>
     design-time-name="Package\DimProduct">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="137,42"
-          Id="Package\DimProduct\Derivated Id"
-          TopLeft="304,317.5" />
+          Size="190,42"
+          Id="Package\DimProduct\Derivated ProductiInfos"
+          TopLeft="277.5,215.5" />
         <NodeLayout
           Size="155,42"
           Id="Package\DimProduct\Source Products"
           TopLeft="295,113.5" />
         <NodeLayout
-          Size="190,42"
-          Id="Package\DimProduct\Derivated ProductiInfos"
-          TopLeft="277.5,215.5" />
+          Size="137,42"
+          Id="Package\DimProduct\Derivated Id"
+          TopLeft="304,317.5" />
         <NodeLayout
           Size="188,42"
           Id="Package\DimProduct\Destination dimProduct"
@@ -22305,7 +22299,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22327,7 +22323,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22349,7 +22347,9 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -22387,13 +22387,41 @@ WHERE o.OrderID = d.OrderID;</property>
       <GraphLayout
         Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="179,42"
-          Id="Package\FactSale\Union ALL DateOrder"
-          TopLeft="226.666666666667,264.333333333333" />
+          Size="174,42"
+          Id="Package\FactSale\Union All Categories"
+          TopLeft="1724.44444444444,300" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\FactSale\ShipLocationID"
+          TopLeft="1304.22222222222,419.927350427349" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\FactSale\RequiredDate lookup"
+          TopLeft="226.444444444445,158.42735042735" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\FactSale\Union All RequiredDate"
+          TopLeft="498.888888888889,63.3333333333333" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\FactSale\Derived Empty DateOrder"
+          TopLeft="505.555555555556,258.482905982906" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\FactSale\Derived Empty Employee"
+          TopLeft="1047.11111111111,306.427350427349" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\FactSale\Union All ShipLocation"
+          TopLeft="1325.55555555556,215.111111111111" />
         <NodeLayout
           Size="236,42"
           Id="Package\FactSale\Derived Empty CustomerLocation"
           TopLeft="1293.11111111111,572.371794871793" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\FactSale\Union All Product"
+          TopLeft="787.666666666667,202.666666666667" />
         <NodeLayout
           Size="176,42"
           Id="Package\FactSale\ShipLocation Lookup"
@@ -22411,17 +22439,33 @@ WHERE o.OrderID = d.OrderID;</property>
           Id="Package\FactSale\Customer lookup"
           TopLeft="38.7777777777778,451.722222222221" />
         <NodeLayout
+          Size="170,42"
+          Id="Package\FactSale\Union All Employee"
+          TopLeft="808.222222222222,416" />
+        <NodeLayout
           Size="193,42"
           Id="Package\FactSale\Derived Empty Category"
           TopLeft="1864.22222222222,184.371794871793" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\FactSale\DimDateOrder lookup"
+          TopLeft="251.444444444444,382.594017094016" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\FactSale\Union All"
+          TopLeft="56.6666666666667,550" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\FactSale\Union ALL DateOrder"
+          TopLeft="226.666666666667,264.333333333333" />
         <NodeLayout
           Size="130,42"
           Id="Package\FactSale\Unir tout 7"
           TopLeft="1610.88888888889,50.3333333333333" />
         <NodeLayout
-          Size="197,42"
-          Id="Package\FactSale\Derived Empty Employee"
-          TopLeft="1047.11111111111,306.427350427349" />
+          Size="167,42"
+          Id="Package\FactSale\String Conversions"
+          TopLeft="1727.66666666667,448.666666666667" />
         <NodeLayout
           Size="165,42"
           Id="Package\FactSale\Derived Date keys"
@@ -22439,17 +22483,9 @@ WHERE o.OrderID = d.OrderID;</property>
           Id="Package\FactSale\Destination FactSale"
           TopLeft="1721.88888888889,554.972222222222" />
         <NodeLayout
-          Size="174,42"
-          Id="Package\FactSale\Union All Categories"
-          TopLeft="1724.44444444444,300" />
-        <NodeLayout
           Size="208,42"
           Id="Package\FactSale\Union All CustomerLocation"
           TopLeft="1269.33333333333,501" />
-        <NodeLayout
-          Size="170,42"
-          Id="Package\FactSale\Union All Employee"
-          TopLeft="808.222222222222,416" />
         <NodeLayout
           Size="175,42"
           Id="Package\FactSale\Convert CustomerID"
@@ -22471,13 +22507,9 @@ WHERE o.OrderID = d.OrderID;</property>
           Id="Package\FactSale\Sale infos conversion Script"
           TopLeft="240.916666666667,553.066239316238" />
         <NodeLayout
-          Size="184,42"
-          Id="Package\FactSale\Union All ShipLocation"
-          TopLeft="1325.55555555556,215.111111111111" />
-        <NodeLayout
-          Size="121,42"
-          Id="Package\FactSale\Union All"
-          TopLeft="56.6666666666667,550" />
+          Size="162,42"
+          Id="Package\FactSale\Employee Lookup"
+          TopLeft="785.111111111111,311.427350427349" />
         <NodeLayout
           Size="215,42"
           Id="Package\FactSale\Derived Empty RequiredDate"
@@ -22487,95 +22519,19 @@ WHERE o.OrderID = d.OrderID;</property>
           Id="Package\FactSale\ShipName Conversion"
           TopLeft="1715.44444444444,373.444444444444" />
         <NodeLayout
-          Size="162,42"
-          Id="Package\FactSale\Employee Lookup"
-          TopLeft="785.111111111111,311.427350427349" />
-        <NodeLayout
-          Size="160,42"
-          Id="Package\FactSale\Union All Product"
-          TopLeft="787.666666666667,202.666666666667" />
-        <NodeLayout
-          Size="167,42"
-          Id="Package\FactSale\String Conversions"
-          TopLeft="1727.66666666667,448.666666666667" />
-        <NodeLayout
           Size="187,42"
           Id="Package\FactSale\Derived Empty Product"
           TopLeft="1037.11111111111,56.3162393162381" />
         <NodeLayout
-          Size="200,42"
-          Id="Package\FactSale\Derived Empty DateOrder"
-          TopLeft="505.555555555556,258.482905982906" />
+          Size="158,42"
+          Id="Package\FactSale\Category Lookup"
+          TopLeft="1575.33333333333,184.371794871793" />
         <NodeLayout
           Size="201,42"
           Id="Package\FactSale\CustomerLocation Lookup"
           TopLeft="820.777777777777,579.482905982904" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\FactSale\ShipLocationID"
-          TopLeft="1304.22222222222,419.927350427349" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\FactSale\RequiredDate lookup"
-          TopLeft="226.444444444445,158.42735042735" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\FactSale\Union All RequiredDate"
-          TopLeft="498.888888888889,63.3333333333333" />
-        <NodeLayout
-          Size="181,42"
-          Id="Package\FactSale\DimDateOrder lookup"
-          TopLeft="251.444444444444,382.594017094016" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\FactSale\Category Lookup"
-          TopLeft="1575.33333333333,184.371794871793" />
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 14]"
-          TopLeft="177.666666666667,572.533119658119">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="63.2500000000003,0"
-              Start="0,0"
-              End="55.7500000000003,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="55.7500000000003,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\FactSale.Paths[Unir tout sortie 13]"
-          TopLeft="1808.94444444444,342">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.444444444444"
-              Start="0,0"
-              End="0,23.944444444444">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.944444444444" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 12]"
           TopLeft="1417.55555555556,215.111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22609,7 +22565,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 11]"
+          Id="Package\FactSale.Paths[Unir tout sortie 12]"
           TopLeft="1696.22222222222,92.3333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22634,6 +22590,50 @@ WHERE o.OrderID = d.OrderID;</property>
                     Point3="-41.8888888888932,41.486789805938" />
                   <mssgle:LineSegment
                     End="-41.8888888888932,84.5384615384597" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Unir tout sortie 11]"
+          TopLeft="893.166666666667,458">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.444444444444"
+              Start="0,0"
+              End="0,34.944444444444">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.944444444444" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Unir tout sortie 1]"
+          TopLeft="315.555555555556,264.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-63.905982905983"
+              Start="0,0"
+              End="0,-56.405982905983">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-56.405982905983" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22737,7 +22737,55 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance2]"
+          TopLeft="115.527777777778,391.722222222221">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,20.4453125,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\FactSale.Paths[Sortie de recherche avec correspondance1]"
+          TopLeft="314.638888888889,382.594017094016">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-76.260683760683"
+              Start="0,0"
+              End="0,-68.760683760683">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-68.760683760683" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-91.67701171875,-40.1850293803415,183.3540234375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance]"
           TopLeft="343.111111111112,158.42735042735">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22769,54 +22817,6 @@ WHERE o.OrderID = d.OrderID;</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="33.2118771701387,-16.5229946114603,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance]"
-          TopLeft="115.527777777778,391.722222222221">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,20.4453125,183.3540234375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance2]"
-          TopLeft="314.638888888889,382.594017094016">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,-76.260683760683"
-              Start="0,0"
-              End="0,-68.760683760683">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-68.760683760683" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-91.67701171875,-40.1850293803415,183.3540234375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -22965,7 +22965,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output2]"
+          Id="Package\FactSale.Paths[Lookup No Match Output5]"
           TopLeft="917.111111111111,78.3717948717936">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22989,7 +22989,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output]"
+          Id="Package\FactSale.Paths[Lookup No Match Output4]"
           TopLeft="1380,325.482905982905">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23025,7 +23025,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output1]"
+          Id="Package\FactSale.Paths[Lookup No Match Output3]"
           TopLeft="1391.88888888889,134.371794871793">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23049,7 +23049,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output5]"
+          Id="Package\FactSale.Paths[Lookup No Match Output2]"
           TopLeft="1733.33333333333,205.371794871793">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23073,7 +23073,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output3]"
+          Id="Package\FactSale.Paths[Lookup No Match Output1]"
           TopLeft="1021.77777777778,596.927350427349">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23097,7 +23097,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output4]"
+          Id="Package\FactSale.Paths[Lookup No Match Output]"
           TopLeft="947.111111111111,329.927350427349">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23337,7 +23337,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output4]"
+          Id="Package\FactSale.Paths[Derived Column Output8]"
           TopLeft="505.555555555556,282.40811965812">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23359,7 +23359,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output1]"
+          Id="Package\FactSale.Paths[Derived Column Output7]"
           TopLeft="1145.61111111111,348.427350427349">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23393,7 +23393,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output2]"
+          Id="Package\FactSale.Paths[Derived Column Output6]"
           TopLeft="418.111111111111,83.6480186480185">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23415,7 +23415,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output3]"
+          Id="Package\FactSale.Paths[Derived Column Output5]"
           TopLeft="1408.88888888889,572.371794871793">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23437,7 +23437,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output8]"
+          Id="Package\FactSale.Paths[Derived Column Output4]"
           TopLeft="1486.66666666667,72">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23459,7 +23459,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output5]"
+          Id="Package\FactSale.Paths[Derived Column Output3]"
           TopLeft="341.694444444444,467.594017094016">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23481,7 +23481,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output6]"
+          Id="Package\FactSale.Paths[Derived Column Output2]"
           TopLeft="1960.72222222222,226.371794871793">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23515,7 +23515,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output7]"
+          Id="Package\FactSale.Paths[Derived Column Output1]"
           TopLeft="1227.44444444444,232.963675213674">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23593,51 +23593,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 1]"
-          TopLeft="893.166666666667,458">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42.444444444444"
-              Start="0,0"
-              End="0,34.944444444444">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.944444444444" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\FactSale.Paths[Unir tout sortie 17]"
-          TopLeft="315.555555555556,264.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,-63.905982905983"
-              Start="0,0"
-              End="0,-56.405982905983">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-56.405982905983" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 16]"
           TopLeft="1376.27777777778,501">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23659,7 +23615,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 15]"
+          Id="Package\FactSale.Paths[Unir tout sortie 16]"
           TopLeft="866.888888888889,244.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23672,6 +23628,50 @@ WHERE o.OrderID = d.OrderID;</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,59.260683760682" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Unir tout sortie 15]"
+          TopLeft="177.666666666667,572.533119658119">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.2500000000003,0"
+              Start="0,0"
+              End="55.7500000000003,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="55.7500000000003,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactSale.Paths[Unir tout sortie 14]"
+          TopLeft="1808.94444444444,342">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.444444444444"
+              Start="0,0"
+              End="0,23.944444444444">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.944444444444" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
