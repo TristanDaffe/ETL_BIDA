@@ -89,8 +89,8 @@ SellerKey varchar(100) NOT NULL
 CONSTRAINT FK_SellerKey REFERENCES dimEmployee(EmployeeKey),
 OrderDateKey int NOT NULL
 CONSTRAINT FK_OrderDateKey REFERENCES dimDate(DateKey),
-ShipDateKey int NOT NULL
-CONSTRAINT FK_ShipDateKey REFERENCES dimDate(DateKey),
+RequiredDateKey int NOT NULL
+CONSTRAINT FK_RequiredDateKey REFERENCES dimDate(DateKey),
 ShipLocationKey varchar(100) NOT NULL
 CONSTRAINT FK_ShipLocationKey REFERENCES dimLocation(LocationKey),
 ShipperName varchar(100) NOT NULL,
