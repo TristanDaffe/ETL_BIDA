@@ -11,59 +11,11 @@
   DTS:LocaleID="2060"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="137"
-  DTS:VersionGUID="{A7777D48-A8DB-4865-AED2-F4A5D3594CEC}">
+  DTS:VersionBuild="138"
+  DTS:VersionGUID="{A5DF4B5A-D5F7-4A0D-A2C4-4BBA55147ECA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-QUEP38G]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{D974AB69-B082-4212-964B-01F8FE281C00}"
-      DTS:ObjectName="DESKTOP-QUEP38G">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-ITR5N7SB\TRUEMSSQLSERVER;Initial Catalog=Foodies997;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{D974AB69-B082-4212-964B-01F8FE281C00}DESKTOP-QUEP38G;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-QUEP38G.BI_PROJET]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{D2BE9FA4-8EDD-4DC8-B96F-29566DCEEDE6}"
-      DTS:ObjectName="DESKTOP-QUEP38G.BI_PROJET">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-ITR5N7SB\TRUEMSSQLSERVER;Initial Catalog=Foodies977Dw;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{D2BE9FA4-8EDD-4DC8-B96F-29566DCEEDE6}DESKTOP-QUEP38G.BI_PROJET;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-QUEP38G.BI_PROJET 1]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{80C995C6-5337-40F8-A2F0-ECFE3819D55B}"
-      DTS:ObjectName="DESKTOP-QUEP38G.BI_PROJET 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-ITR5N7SB\TRUEMSSQLSERVER;Initial Catalog=BI_PROJET;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{80C995C6-5337-40F8-A2F0-ECFE3819D55B}DESKTOP-QUEP38G.BI_PROJET 1;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-QUEP38G.Foodies997]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{B0802F08-5612-4D97-A240-A5B458E4E59B}"
-      DTS:ObjectName="DESKTOP-QUEP38G.Foodies997">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-ITR5N7SB\TRUEMSSQLSERVER;Initial Catalog=Foodies997;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{B0802F08-5612-4D97-A240-A5B458E4E59B}DESKTOP-QUEP38G.Foodies997;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[localhost.Foodies977Dw.sa]"
       DTS:CreationName="OLEDB"
@@ -7604,7 +7556,7 @@ where [refTable].[DateKey] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Spécifie la liste d'identificateurs de traçabilité se mappant aux paramètres utilisés dans la propriété SQLCommand par l'instruction SQL. Les entrées dans la liste sont séparées par des points-virgules."
-                  name="ParameterMap">#{Package\FactSale\2230:invalid};</property>
+                  name="ParameterMap">#{Package\FactSale\2232:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
@@ -21035,44 +20987,44 @@ WHERE o.OrderID = d.OrderID;</property>
               startId="Package\FactSale\Derived Empty Product.Outputs[Derived Column Output]" />
             <path
               refId="Package\FactSale.Paths[Derived Column Output7]"
-              endId="Package\FactSale\Union All Employee.Inputs[Entrée Union All 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty Employee.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output6]"
-              endId="Package\FactSale\Union All RequiredDate.Inputs[Unir tout entrée 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty RequiredDate.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output5]"
-              endId="Package\FactSale\Union All CustomerLocation.Inputs[Unir tout entrée 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty CustomerLocation.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output8]"
-              endId="Package\FactSale\Union ALL DateOrder.Inputs[Entrée Union All 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty DateOrder.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output3]"
-              endId="Package\FactSale\DimDateOrder lookup.Inputs[Entrée de recherche]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Date keys.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output2]"
-              endId="Package\FactSale\Union All Categories.Inputs[Entrée Union All 1]"
-              name="Derived Column Output"
-              startId="Package\FactSale\Derived Empty Category.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\FactSale.Paths[Derived Column Output1]"
               endId="Package\FactSale\Union All ShipLocation.Inputs[Entrée Union All 1]"
               name="Derived Column Output"
               startId="Package\FactSale\Derived Empty ShipLocation.Outputs[Derived Column Output]" />
             <path
-              refId="Package\FactSale.Paths[Derived Column Output4]"
+              refId="Package\FactSale.Paths[Derived Column Output6]"
+              endId="Package\FactSale\Union All Categories.Inputs[Entrée Union All 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty Category.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output5]"
+              endId="Package\FactSale\DimDateOrder lookup.Inputs[Entrée de recherche]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Date keys.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output8]"
               endId="Package\FactSale\Unir tout 7.Inputs[Unir tout entrée 1]"
               name="Derived Column Output"
               startId="Package\FactSale\Derived Empty Customer.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output3]"
+              endId="Package\FactSale\Union All CustomerLocation.Inputs[Unir tout entrée 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty CustomerLocation.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output2]"
+              endId="Package\FactSale\Union All RequiredDate.Inputs[Unir tout entrée 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty RequiredDate.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output1]"
+              endId="Package\FactSale\Union All Employee.Inputs[Entrée Union All 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty Employee.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FactSale.Paths[Derived Column Output4]"
+              endId="Package\FactSale\Union ALL DateOrder.Inputs[Entrée Union All 1]"
+              name="Derived Column Output"
+              startId="Package\FactSale\Derived Empty DateOrder.Outputs[Derived Column Output]" />
             <path
               refId="Package\FactSale.Paths[Lookup Match Output]"
               endId="Package\FactSale\Union All Employee.Inputs[Unir tout entrée 1]"
@@ -21110,34 +21062,34 @@ WHERE o.OrderID = d.OrderID;</property>
               startId="Package\FactSale\Customer lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\FactSale.Paths[Lookup No Match Output4]"
-              endId="Package\FactSale\Derived Empty ShipLocation.Inputs[Derived Column Input]"
-              name="Lookup No Match Output"
-              startId="Package\FactSale\ShipLocation Lookup.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\FactSale.Paths[Lookup No Match Output3]"
-              endId="Package\FactSale\Derived Empty Customer.Inputs[Derived Column Input]"
-              name="Lookup No Match Output"
-              startId="Package\FactSale\Customer.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\FactSale.Paths[Lookup No Match Output5]"
-              endId="Package\FactSale\Derived Empty Product.Inputs[Derived Column Input]"
-              name="Lookup No Match Output"
-              startId="Package\FactSale\Product Lookup.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\FactSale.Paths[Lookup No Match Output1]"
-              endId="Package\FactSale\Derived Empty CustomerLocation.Inputs[Derived Column Input]"
-              name="Lookup No Match Output"
-              startId="Package\FactSale\CustomerLocation Lookup.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\FactSale.Paths[Lookup No Match Output]"
               endId="Package\FactSale\Derived Empty Employee.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
               startId="Package\FactSale\Employee Lookup.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\FactSale.Paths[Lookup No Match Output2]"
+              refId="Package\FactSale.Paths[Lookup No Match Output3]"
+              endId="Package\FactSale\Derived Empty CustomerLocation.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\FactSale\CustomerLocation Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\FactSale.Paths[Lookup No Match Output5]"
               endId="Package\FactSale\Derived Empty Category.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
               startId="Package\FactSale\Category Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\FactSale.Paths[Lookup No Match Output1]"
+              endId="Package\FactSale\Derived Empty Customer.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\FactSale\Customer.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\FactSale.Paths[Lookup No Match Output]"
+              endId="Package\FactSale\Derived Empty ShipLocation.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\FactSale\ShipLocation Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\FactSale.Paths[Lookup No Match Output2]"
+              endId="Package\FactSale\Derived Empty Product.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\FactSale\Product Lookup.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\FactSale.Paths[Output 0]"
               endId="Package\FactSale\Derived Date keys.Inputs[Derived Column Input]"
@@ -21170,19 +21122,19 @@ WHERE o.OrderID = d.OrderID;</property>
               startId="Package\FactSale\CustomerLocationID.Outputs[Sortie de colonne dérivée]" />
             <path
               refId="Package\FactSale.Paths[Sortie de recherche avec correspondance1]"
-              endId="Package\FactSale\Customer lookup.Inputs[Lookup Input]"
-              name="Sortie de recherche avec correspondance"
-              startId="Package\FactSale\Product lookup.Outputs[Sortie de recherche avec correspondance]" />
-            <path
-              refId="Package\FactSale.Paths[Sortie de recherche avec correspondance2]"
               endId="Package\FactSale\Union All RequiredDate.Inputs[Entrée Union All 1]"
               name="Sortie de recherche avec correspondance"
               startId="Package\FactSale\RequiredDate lookup.Outputs[Sortie de recherche avec correspondance]" />
             <path
-              refId="Package\FactSale.Paths[Sortie de recherche avec correspondance]"
+              refId="Package\FactSale.Paths[Sortie de recherche avec correspondance2]"
               endId="Package\FactSale\Union ALL DateOrder.Inputs[Unir tout entrée 1]"
               name="Sortie de recherche avec correspondance"
               startId="Package\FactSale\DimDateOrder lookup.Outputs[Sortie de recherche avec correspondance]" />
+            <path
+              refId="Package\FactSale.Paths[Sortie de recherche avec correspondance]"
+              endId="Package\FactSale\Customer lookup.Inputs[Lookup Input]"
+              name="Sortie de recherche avec correspondance"
+              startId="Package\FactSale\Product lookup.Outputs[Sortie de recherche avec correspondance]" />
             <path
               refId="Package\FactSale.Paths[Sortie de recherche sans correspondance]"
               endId="Package\FactSale\Derived Empty RequiredDate.Inputs[Derived Column Input]"
@@ -21200,44 +21152,44 @@ WHERE o.OrderID = d.OrderID;</property>
               startId="Package\FactSale\Source SaleInfos.Outputs[Sortie de source OLE DB]" />
             <path
               refId="Package\FactSale.Paths[Unir tout sortie 17]"
+              endId="Package\FactSale\RequiredDate lookup.Inputs[Entrée de recherche]"
+              name="Unir tout sortie 1"
+              startId="Package\FactSale\Union ALL DateOrder.Outputs[Unir tout sortie 1]" />
+            <path
+              refId="Package\FactSale.Paths[Unir tout sortie 1]"
               endId="Package\FactSale\CustomerLocationID.Inputs[Entrée de colonne dérivée]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All Employee.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 1]"
+              refId="Package\FactSale.Paths[Unir tout sortie 11]"
               endId="Package\FactSale\Category Lookup.Inputs[Lookup Input]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Unir tout 7.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 11]"
+              refId="Package\FactSale.Paths[Unir tout sortie 12]"
               endId="Package\FactSale\Convert CustomerID.Inputs[Entrée de colonne dérivée]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All ShipLocation.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 12]"
+              refId="Package\FactSale.Paths[Unir tout sortie 13]"
               endId="Package\FactSale\ShipName Conversion.Inputs[Entrée de colonne dérivée]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All Categories.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 13]"
+              refId="Package\FactSale.Paths[Unir tout sortie 14]"
               endId="Package\FactSale\Sale infos conversion Script.Inputs[Input 0]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 14]"
+              refId="Package\FactSale.Paths[Unir tout sortie 15]"
               endId="Package\FactSale\Employee Lookup.Inputs[Lookup Input]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All Product.Outputs[Unir tout sortie 1]" />
             <path
-              refId="Package\FactSale.Paths[Unir tout sortie 15]"
+              refId="Package\FactSale.Paths[Unir tout sortie 16]"
               endId="Package\FactSale\ShipLocationID.Inputs[Entrée de colonne dérivée]"
               name="Unir tout sortie 1"
               startId="Package\FactSale\Union All CustomerLocation.Outputs[Unir tout sortie 1]" />
-            <path
-              refId="Package\FactSale.Paths[Unir tout sortie 16]"
-              endId="Package\FactSale\RequiredDate lookup.Inputs[Entrée de recherche]"
-              name="Unir tout sortie 1"
-              startId="Package\FactSale\Union ALL DateOrder.Outputs[Unir tout sortie 1]" />
             <path
               refId="Package\FactSale.Paths[Unir tout sortie 18]"
               endId="Package\FactSale\Product Lookup.Inputs[Lookup Input]"
@@ -21970,7 +21922,7 @@ WHERE o.OrderID = d.OrderID;</property>
     design-time-name="Package\DimEmployee">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="198,42"
           Id="Package\DimEmployee\Destination dimEmployee"
@@ -22006,9 +21958,7 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22030,9 +21980,7 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22054,9 +22002,7 @@ WHERE o.OrderID = d.OrderID;</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -22585,7 +22531,7 @@ WHERE o.OrderID = d.OrderID;</property>
           Id="Package\FactSale\Category Lookup"
           TopLeft="1575.33333333333,184.371794871793" />
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 13]"
+          Id="Package\FactSale.Paths[Unir tout sortie 14]"
           TopLeft="177.666666666667,572.533119658119">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22607,7 +22553,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 12]"
+          Id="Package\FactSale.Paths[Unir tout sortie 13]"
           TopLeft="1808.94444444444,342">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22629,7 +22575,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 11]"
+          Id="Package\FactSale.Paths[Unir tout sortie 12]"
           TopLeft="1417.55555555556,215.111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22663,7 +22609,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 1]"
+          Id="Package\FactSale.Paths[Unir tout sortie 11]"
           TopLeft="1696.22222222222,92.3333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22791,7 +22737,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance2]"
+          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance1]"
           TopLeft="343.111111111112,158.42735042735">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22827,7 +22773,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance1]"
+          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance]"
           TopLeft="115.527777777778,391.722222222221">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22851,7 +22797,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance]"
+          Id="Package\FactSale.Paths[Sortie de recherche avec correspondance2]"
           TopLeft="314.638888888889,382.594017094016">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23019,7 +22965,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output5]"
+          Id="Package\FactSale.Paths[Lookup No Match Output2]"
           TopLeft="917.111111111111,78.3717948717936">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23043,7 +22989,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output4]"
+          Id="Package\FactSale.Paths[Lookup No Match Output]"
           TopLeft="1380,325.482905982905">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23079,7 +23025,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output3]"
+          Id="Package\FactSale.Paths[Lookup No Match Output1]"
           TopLeft="1391.88888888889,134.371794871793">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23103,7 +23049,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output2]"
+          Id="Package\FactSale.Paths[Lookup No Match Output5]"
           TopLeft="1733.33333333333,205.371794871793">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23127,7 +23073,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output1]"
+          Id="Package\FactSale.Paths[Lookup No Match Output3]"
           TopLeft="1021.77777777778,596.927350427349">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23151,7 +23097,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Lookup No Match Output]"
+          Id="Package\FactSale.Paths[Lookup No Match Output4]"
           TopLeft="947.111111111111,329.927350427349">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23391,7 +23337,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output8]"
+          Id="Package\FactSale.Paths[Derived Column Output4]"
           TopLeft="505.555555555556,282.40811965812">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23413,7 +23359,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output7]"
+          Id="Package\FactSale.Paths[Derived Column Output1]"
           TopLeft="1145.61111111111,348.427350427349">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23447,7 +23393,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output6]"
+          Id="Package\FactSale.Paths[Derived Column Output2]"
           TopLeft="418.111111111111,83.6480186480185">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23469,7 +23415,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output5]"
+          Id="Package\FactSale.Paths[Derived Column Output3]"
           TopLeft="1408.88888888889,572.371794871793">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23491,7 +23437,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output4]"
+          Id="Package\FactSale.Paths[Derived Column Output8]"
           TopLeft="1486.66666666667,72">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23513,7 +23459,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output3]"
+          Id="Package\FactSale.Paths[Derived Column Output5]"
           TopLeft="341.694444444444,467.594017094016">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23535,7 +23481,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output2]"
+          Id="Package\FactSale.Paths[Derived Column Output6]"
           TopLeft="1960.72222222222,226.371794871793">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23569,7 +23515,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Derived Column Output1]"
+          Id="Package\FactSale.Paths[Derived Column Output7]"
           TopLeft="1227.44444444444,232.963675213674">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23647,7 +23593,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 17]"
+          Id="Package\FactSale.Paths[Unir tout sortie 1]"
           TopLeft="893.166666666667,458">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23669,7 +23615,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 16]"
+          Id="Package\FactSale.Paths[Unir tout sortie 17]"
           TopLeft="315.555555555556,264.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23691,7 +23637,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 15]"
+          Id="Package\FactSale.Paths[Unir tout sortie 16]"
           TopLeft="1376.27777777778,501">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23713,7 +23659,7 @@ WHERE o.OrderID = d.OrderID;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\FactSale.Paths[Unir tout sortie 14]"
+          Id="Package\FactSale.Paths[Unir tout sortie 15]"
           TopLeft="866.888888888889,244.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23737,6 +23683,29 @@ WHERE o.OrderID = d.OrderID;</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactSale\RequiredDate lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[dimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\FactSale\ShipLocation Lookup">
     <Properties>
@@ -23897,52 +23866,6 @@ WHERE o.OrderID = d.OrderID;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\FactSale\CustomerLocation Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[dimLocation]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\FactSale\RequiredDate lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[dimDate]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\FactSale\Category Lookup">
     <Properties>
       <Property>
@@ -23954,6 +23877,29 @@ WHERE o.OrderID = d.OrderID;</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[dimCategory]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactSale\CustomerLocation Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[dimLocation]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
