@@ -49,8 +49,8 @@ LastName varchar(100) NOT NULL,
 FirstName varchar(100) NOT NULL,
 );
 
-INSERT INTO dimEmployee VALUES 
-('Unknown', 0, 'Unknown', 'Unknown');
+INSERT INTO dimEmployee (EmployeeKey, OriginalId, LastName, FirstName)
+VALUES ('Unknown', 0, 'Unknown', 'Unknown');
 
 DROP TABLE IF EXISTS dimCategory
 CREATE TABLE dimCategory
@@ -60,8 +60,8 @@ OriginalId int NOT NULL,
 NameEnglish varchar(100) NOT NULL,
 NameFrench varchar(100) NOT NULL,
 );
-INSERT INTO dimCategory VALUES 
-(0, 0, 'Unknown', 'Unknown');
+INSERT INTO dimCategory (CategoryKey, OriginalId, NameEnglish, NameFrench)
+VALUES (0, 0, 'Unknown', 'Unknown');
 
 DROP TABLE IF EXISTS dimLocation
 CREATE TABLE dimLocation
