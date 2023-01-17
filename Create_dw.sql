@@ -18,6 +18,9 @@ MonthEnglishName nvarchar(100) NOT NULL,
 "Year" int NOT NULL,
 );
 
+INSERT INTO dimDate(DateKey, DayFrenchName, DayEnglishName, MonthFrenchName, MonthEnglishName, "Year")
+VALUES(-1, 'Unknown', 'Unknown', 'Unknown', 'Unknown', 0);
+
 
 DROP TABLE IF EXISTS dimProduct
 CREATE TABLE dimProduct
@@ -29,6 +32,9 @@ QuantityPerUnit varchar(100) NOT NULL,
 Discontinued bit NOT NULL,
 );
 
+INSERT INTO dimProduct(ProductKey, OriginalId, productName, QuantityPerUnit, Discontinued)
+VALUES('Unknown', -1, 'Unknown', 'Unknown', 0);
+
 
 DROP TABLE IF EXISTS dimCustomer
 CREATE TABLE dimCustomer
@@ -37,8 +43,10 @@ CustomerKey varchar(50) PRIMARY KEY,
 [CompanyName] nvarchar(50),
 [OriginalId] varchar(50),
 [ContactName] nvarchar(50)
-
 );
+
+INSERT INTO dimCustomer(CustomerKey, CompanyName, OriginalId, ContactName)
+VALUES('Unknown', 'Unknown', 'Unknown', 'Unknown');
 
 DROP TABLE IF EXISTS dimEmployee
 CREATE TABLE dimEmployee
@@ -47,7 +55,7 @@ EmployeeKey varchar(100) PRIMARY KEY,
 OriginalId int NOT NULL,
 LastName varchar(100) NOT NULL,
 FirstName varchar(100) NOT NULL,
-);
+);	
 
 INSERT INTO dimEmployee (EmployeeKey, OriginalId, LastName, FirstName)
 VALUES ('Unknown', 0, 'Unknown', 'Unknown');
@@ -61,7 +69,7 @@ NameEnglish varchar(100) NOT NULL,
 NameFrench varchar(100) NOT NULL,
 );
 INSERT INTO dimCategory (CategoryKey, OriginalId, NameEnglish, NameFrench)
-VALUES (0, 0, 'Unknown', 'Unknown');
+VALUES ('Unknown', 0, 'Unknown', 'Unknown');
 
 DROP TABLE IF EXISTS dimLocation
 CREATE TABLE dimLocation
